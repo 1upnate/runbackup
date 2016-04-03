@@ -7,6 +7,6 @@ date=$(date +%F)
 
 mysqldump --all-databases > /backup/mariadb/daily/$date
 
-echo "Daily Dump Completed for $date" | sendxmpp 1upnate@chat.e-dev.us
+echo "Daily Dump Completed for $date" | sendxmpp user@jabber-server.com
 
 find /backup/mariadb/daily/* -mtime +8 -exec rm {} \;
